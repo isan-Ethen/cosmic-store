@@ -51,8 +51,7 @@ packagekit-zbus = { version = "0.1", optional = true }
 cosmic-panel-config = { git = "https://github.com/pop-os/cosmic-panel", optional = true }
 
 [dependencies.libcosmic]
-git = "https://github.com/isan-Ethen/libcosmic.git"
-branch = "update-iced"
+git = "https://github.com/pop-os/libcosmic.git"
 default-features = false
 features = ["multi-window", "tokio", "winit"]
 
@@ -94,8 +93,7 @@ members = ["flathub-stats"]
 # [patch.'https://github.com/pop-os/cosmic-text.git']
 # cosmic-text = { path = "../cosmic-text" }
 
-[patch.'https://github.com/pop-os/libcosmic']
-libcosmic = { git = "https://github.com/isan-Ethen/libcosmic.git", branch = "update-iced" }
+# [patch.'https://github.com/pop-os/libcosmic']
 # libcosmic = { path = "../libcosmic" }
 # cosmic-config = { path = "../libcosmic/cosmic-config" }
 # cosmic-theme = { path = "../libcosmic/cosmic-theme" }
@@ -105,3 +103,6 @@ libcosmic = { git = "https://github.com/isan-Ethen/libcosmic.git", branch = "upd
 
 # [patch.'https://github.com/jackpot51/spdx.git']
 # spdx = { path = "../../spdx" }
+
+[patch.'https://github.com/pop-os/winit/']
+winit = { git = "https://github.com/isan-Ethen/winit.git", branch = "libredox" }
